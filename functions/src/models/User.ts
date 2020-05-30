@@ -8,5 +8,5 @@ export class User{
         public emailVerified:boolean,
         public disabled:boolean,
         public verified:boolean,
-        public token?:string[]){}
+        public tokens?:string[]){}
 }

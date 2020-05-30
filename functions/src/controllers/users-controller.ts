@@ -36,7 +36,7 @@ export async function create(req: Request, res: Response) {
             emailVerified:userObj.emailVerified,
             disabled:userObj.disabled,
             verified:userObj.verified,
-            tokens:userObj.token ? userObj.token : []
+            tokens:userObj.tokens ? userObj.tokens : []
         }
         const userRef = await db.doc(`users/${uid}`).create(userDoc);
         console.log(userRef);
