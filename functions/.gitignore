@@ -1,7 +1,7 @@
 ## Compiled JavaScript files
 **/*.js
 **/*.js.map
-
+**/livraison-colis-firebase-adminsdk.json
 # Typescript v1 declaration files
 typings/
 
