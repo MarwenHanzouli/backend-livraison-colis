@@ -18,7 +18,7 @@ export async function create(req: Request, res: Response) {
         await admin.auth().setCustomUserClaims(uid, { role });
         //let x=await admin.auth().getUser(uid);
         let verified:boolean=false;
-        if(role==="client"){
+        if(role=="client"){
             verified=true;
         }
         let deviceTokens:string[]=[];
@@ -58,3 +58,6 @@ export async function create(req: Request, res: Response) {
     return res.status(500).send({ message: `${err.code} - ${err.message}` });
  }
  
+ //function check token of new authentication if it is registred in user document
+ //input : token,uid
+ //if not exit : deviceTokens.push(token)
